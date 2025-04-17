@@ -4,6 +4,10 @@ import Forms.HumanBeingForm;
 import Managers.CollectionManager;
 import Managers.ConsoleManager;
 
+/**
+ * Команда "add_if_min".
+ * Описание команды: добавить новый элемент, если его значение меньше, чем у наименьшего элемента коллекции.
+ */
 public class AddIfMin implements CommandInterface{
     ConsoleManager console;
     CollectionManager collection;

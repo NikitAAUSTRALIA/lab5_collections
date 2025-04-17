@@ -1,6 +1,5 @@
 package Commands;
 
-import Entities.HumanBeing;
 import Managers.CollectionManager;
 import Managers.ConsoleManager;
 
@@ -22,7 +21,6 @@ public class CountLessThanImpactSpeed implements CommandInterface{
      *
      * @param args аргументы
      */
-
     @Override
     public int execute(String[] args) {
         if (args.length != 1) {

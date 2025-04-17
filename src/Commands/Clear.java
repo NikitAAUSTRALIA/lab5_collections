@@ -3,6 +3,10 @@ package Commands;
 import Managers.CollectionManager;
 import Managers.ConsoleManager;
 
+/**
+ * Команда "clear".
+ * Описание команды: очистить коллекцию.
+ */
 public class Clear implements CommandInterface{
     ConsoleManager console;
     CollectionManager collection;
@@ -12,6 +16,11 @@ public class Clear implements CommandInterface{
         this.collection = collection;
     }
 
+    /**
+     * Выполнение команды.
+     *
+     * @param args аргументы
+     */
     @Override
     public int execute(String[] args) {
         if (args.length != 0) {

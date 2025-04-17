@@ -83,7 +83,7 @@ public abstract class Form<T> {
     /**
      * Запрашивает у пользователя Boolean
      *
-     * @param fieldName    Название поля
+     * @param fieldName Название поля
      * @return boolean значение
      */
     public Boolean askBoolean(String fieldName) {

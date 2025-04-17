@@ -2,6 +2,9 @@ package Entities;
 
 import lombok.*;
 
+/**
+ * Класс машины.
+ */
 @AllArgsConstructor
 @Getter
 @Setter

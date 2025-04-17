@@ -6,7 +6,7 @@ import Managers.ConsoleManager;
 
 /**
  * Команда "add_if_max".
- * Описание команды: добавить новый элемент, если его значение меньше, чем у наименьшего элемента коллекции.
+ * Описание команды: добавить новый элемент, если его значение больше, чем у наибольшего элемента коллекции.
  */
 public class AddIfMax implements CommandInterface {
     ConsoleManager console;

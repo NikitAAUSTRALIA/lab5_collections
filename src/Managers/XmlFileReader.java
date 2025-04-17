@@ -7,6 +7,9 @@ import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.util.regex.*;
 
+/**
+ * Класс для чтения/записи в xml.
+ */
 public class XmlFileReader {
     String filePath;
     ConsoleManager console;
@@ -16,8 +19,14 @@ public class XmlFileReader {
         this.console = console;
     }
 
+    /**
+     * Прочитать файл.
+     *
+     * @throws IOException ошибка при вводе/выводе
+     * @return Текст файла
+     */
     public String readFile() throws IOException {
-        FileInputStream fileInputStream = null;
+        FileInputStream fileInputStream;
         try {
             fileInputStream = new FileInputStream(filePath);
         } catch (FileNotFoundException e) {
@@ -39,8 +48,14 @@ public class XmlFileReader {
         return file;
     }
 
+    /**
+     * Проверить и сохранить объекты в файл
+     *
+     * @param file Текст файла
+     * @param collection Коллекция для сохранения
+     */
     public void validFileText(String file, CollectionManager collection){
-        Pattern pattern = Pattern.compile("<humanBeing>(?:(?!<humanBeing>)[\\s\\S])*<\\/humanBeing>");
+        Pattern pattern = Pattern.compile("<humanBeing>(?:(?!<humanBeing>)[\\s\\S])*</humanBeing>");
         Matcher matcher = pattern.matcher(file);
         Long id = 0L;
         while (matcher.find()) {
@@ -54,7 +69,7 @@ public class XmlFileReader {
             Mood MoodHumanBeing = Mood.CALM;
             Car CarHumanBeing = null;
             String nowHumanBeing = matcher.group();
-            Pattern patternName = Pattern.compile("<name>([\\s\\S]*?)<\\/name>");
+            Pattern patternName = Pattern.compile("<name>([\\s\\S]*?)</name>");
             Matcher matcherName = patternName.matcher(nowHumanBeing);
             if (matcherName.find()){
                 HumanBeingName = matcherName.group(1);
@@ -62,13 +77,13 @@ public class XmlFileReader {
             else{
                 valid = false;
             }
-            Pattern patternCoordinates = Pattern.compile("<coordinates>(?:(?!<coordinates>)[\\s\\S])*<\\/coordinates>");
+            Pattern patternCoordinates = Pattern.compile("<coordinates>(?:(?!<coordinates>)[\\s\\S])*</coordinates>");
             Matcher matcherCoordinates = patternCoordinates.matcher(nowHumanBeing);
             if (matcherCoordinates.find()){
                 String coordinatesText = matcherCoordinates.group();
-                Pattern patternX = Pattern.compile("<x>([\\s\\S]*?)<\\/x>");
+                Pattern patternX = Pattern.compile("<x>([\\s\\S]*?)</x>");
                 Matcher matcherX = patternX.matcher(coordinatesText);
-                Pattern patternY = Pattern.compile("<y>([\\s\\S]*?)<\\/y>");
+                Pattern patternY = Pattern.compile("<y>([\\s\\S]*?)</y>");
                 Matcher matcherY = patternY.matcher(coordinatesText);
                 try {
                     if (matcherX.find() && matcherY.find()) {
@@ -86,17 +101,17 @@ public class XmlFileReader {
             else{
                 valid = false;
             }
-            Pattern patternRealHero = Pattern.compile("<realHero>([\\s\\S]*?)<\\/realHero>");
+            Pattern patternRealHero = Pattern.compile("<realHero>([\\s\\S]*?)</realHero>");
             Matcher matcherRealHero = patternRealHero.matcher(nowHumanBeing);
             if (matcherRealHero.find()){
                 RealHeroHumanBeing = matcherRealHero.group(1).equals("true");
             }
-            Pattern patternHasToothpick = Pattern.compile("<hasToothpick>([\\s\\S]*?)<\\/hasToothpick>");
+            Pattern patternHasToothpick = Pattern.compile("<hasToothpick>([\\s\\S]*?)</hasToothpick>");
             Matcher matcherHasToothpick = patternHasToothpick.matcher(nowHumanBeing);
             if (matcherHasToothpick.find()){
                 HasToothpickHumanBeing = matcherHasToothpick.group(1).equals("true");
             }
-            Pattern patternImpactSpeed = Pattern.compile("<impactSpeed>([\\s\\S]*?)<\\/impactSpeed>");
+            Pattern patternImpactSpeed = Pattern.compile("<impactSpeed>([\\s\\S]*?)</impactSpeed>");
             Matcher matcherImpactSpeed = patternImpactSpeed.matcher(nowHumanBeing);
             if (matcherImpactSpeed.find()){
                 try{
@@ -110,7 +125,7 @@ public class XmlFileReader {
             else{
                 valid = false;
             }
-            Pattern patternWeaponType = Pattern.compile("<weaponType>([\\s\\S]*?)<\\/weaponType>");
+            Pattern patternWeaponType = Pattern.compile("<weaponType>([\\s\\S]*?)</weaponType>");
             Matcher matcherWeaponType = patternWeaponType.matcher(nowHumanBeing);
             if (matcherWeaponType.find()){
                 try{
@@ -124,7 +139,7 @@ public class XmlFileReader {
             else{
                 valid = false;
             }
-            Pattern patternMood = Pattern.compile("<mood>([\\s\\S]*?)<\\/mood>");
+            Pattern patternMood = Pattern.compile("<mood>([\\s\\S]*?)</mood>");
             Matcher matcherMood = patternMood.matcher(nowHumanBeing);
             if (matcherMood.find()){
                 try {
@@ -138,10 +153,10 @@ public class XmlFileReader {
             else{
                 valid = false;
             }
-            Pattern patternCar = Pattern.compile("<car>([\\s\\S]*?)<\\/car>");
+            Pattern patternCar = Pattern.compile("<car>([\\s\\S]*?)</car>");
             Matcher matcherCar = patternCar.matcher(nowHumanBeing);
             if (matcherCar.find()){
-                Pattern patternCarName = Pattern.compile("<name>([\\s\\S]*?)<\\/name>");
+                Pattern patternCarName = Pattern.compile("<name>([\\s\\S]*?)</name>");
                 Matcher matcherCarName = patternCarName.matcher(matcherCar.group());
                 if (matcherCarName.find()){
                     CarHumanBeing = new Car(matcherCarName.group(1));

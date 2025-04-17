@@ -6,7 +6,7 @@ import lombok.Setter;
 import java.util.Scanner;
 
 /**
- * Менеджер сканера.
+ * Класс для сканера.
  */
 public class ScannerManager {
     @Getter

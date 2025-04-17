@@ -20,7 +20,7 @@ public class CollectionManager {
     /**
      * Коллекция.
      */
-    private LinkedList<HumanBeing> collection = new LinkedList<HumanBeing>();
+    private LinkedList<HumanBeing> collection = new LinkedList<>();
 
     /**
      * Добавить элемент в коллекцию.
@@ -94,33 +94,6 @@ public class CollectionManager {
     public void clear() {
         initializationTime = new Date();
         collection.clear();
-    }
-
-    /**
-     * Вернуть список элементов, значение поля name которых содержит заданную подстроку.
-     *
-     * @param name подстрока
-     */
-    public List<HumanBeing> filterContainsName(String name) {
-        return collection.stream().filter(o -> o.getName().contains(name)).toList();
-    }
-
-    /**
-     * Удалить элементы, которые больше заданного.
-     *
-     * @param o объект для сравнения
-     */
-    public void removeGreater(HumanBeing o) {
-        collection.removeIf(HumanBeing -> HumanBeing.compareTo(o) > 0);
-    }
-
-    /**
-     * Удалить элементы, значение поля annualTurnover которых меньше заданного.
-     *
-     * @param o объект для сравнения
-     */
-    public void removeLower(HumanBeing o) {
-        collection.removeIf(HumanBeing -> HumanBeing.compareTo(o) < 0);
     }
 
     /**

@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.util.Stack;
 
 /**
- * Менеджер скриптов.
+ * Класс для управления скриптами.
  */
 public class ScriptManager {
     private static final Stack<String> pathStack = new Stack<>();
