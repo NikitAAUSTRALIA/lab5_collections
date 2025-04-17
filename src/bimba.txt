@@ -1,0 +1,13 @@
+<xml version>
+<collection>
+    <humanBeing>
+        <name>Penis</name>
+        <coordinates x="1.032" y="5"/>
+        <realHero>true</realHero>
+        <hasToothpick has="true"/>
+        <impactSpeed>324</impactSpeed>
+        <weaponType>PISTOL</weaponType>
+        <mood>CALM</mood>
+        <car name="rolls"></car>
+    </humanBeing>
+</collection>

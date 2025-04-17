@@ -1,0 +1,77 @@
+<collection> 
+    <humanBeing> 
+        <name>John Wick</name> 
+        <coordinates> 
+            <x>12.345</x> 
+            <y>50</y> 
+        </coordinates> 
+        <realHero>true</realHero> 
+        <hasToothpick>false</hasToothpick> 
+        <impactSpeed>120</impactSpeed> 
+        <weaponType>PISTOL</weaponType> 
+        <mood>FRENZY</mood> 
+        <car> 
+            <name>Ford Mustang</name> 
+        </car> 
+    </humanBeing> 
+    <humanBeing> 
+        <name>Sarah Connor</name> 
+        <coordinates> 
+            <x>-5.678</x> 
+            <y>0</y> 
+        </coordinates> 
+        <realHero>true</realHero> 
+        <hasToothpick>true</hasToothpick> 
+        <impactSpeed>90</impactSpeed> 
+        <weaponType>MACHINE_GUN</weaponType> 
+        <mood>CALM</mood> 
+        <car> 
+            <name>Tesla Cybertruck</name> 
+        </car> 
+    </humanBeing> 
+    <humanBeing> 
+        <name>Bruce Wayne</name> 
+        <coordinates> 
+            <x>0.001</x> 
+            <y>100</y> 
+        </coordinates> 
+        <realHero>false</realHero> 
+        <hasToothpick>false</hasToothpick> 
+        <impactSpeed>200</impactSpeed> 
+        <weaponType>BAT</weaponType> 
+        <mood>SORROW</mood> 
+        <car> 
+            <name>Batmobile</name> 
+        </car> 
+    </humanBeing> 
+    <humanBeing> 
+        <name>Darth Vader</name> 
+        <coordinates> 
+            <x>-66.6</x> 
+            <y>666</y> 
+        </coordinates> 
+        <realHero>false</realHero> 
+        <hasToothpick>false</hasToothpick> 
+        <impactSpeed>500</impactSpeed> 
+        <weaponType>MACHINE_GUN</weaponType> 
+        <mood>SADNESS</mood> 
+        <car> 
+            <name>TIE Fighter</name> 
+        </car> 
+    </humanBeing> 
+    <humanBeing> 
+        <name>nikita</name> 
+        <coordinates> 
+            <x>1.203</x> 
+            <y>1</y> 
+        </coordinates> 
+        <realHero>true</realHero> 
+        <hasToothpick>true</hasToothpick> 
+        <impactSpeed>999999</impactSpeed> 
+        <weaponType>MACHINE_GUN</weaponType> 
+        <mood>CALM</mood> 
+        <car> 
+            <name>BMW</name> 
+        </car> 
+    </humanBeing> 
+</collection>
