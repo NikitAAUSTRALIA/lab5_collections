@@ -38,10 +38,20 @@ public class HumanBeingForm extends Form<HumanBeing>{
                 askCar());
     }
 
+    /**
+     * Формирует объект класса {@link Coordinates}.
+     *
+     * @return Объект класса {@link Coordinates}
+     */
     private Coordinates askCoordinates(){
         return new CoordinatesForm(console).build();
     }
 
+    /**
+     * Формирует объект класса {@link Car}.
+     *
+     * @return Объект класса {@link Car}
+     */
     private Car askCar(){
         return new CarForm(console).build();
     }

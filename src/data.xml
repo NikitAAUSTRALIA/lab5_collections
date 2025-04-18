@@ -47,7 +47,7 @@
     <humanBeing> 
         <name>Darth Vader</name> 
         <coordinates> 
-            <x>-66.6</x> 
+            <x>afkldskfl</x>
             <y>666</y> 
         </coordinates> 
         <realHero>false</realHero> 
@@ -62,8 +62,8 @@
     <humanBeing> 
         <name>nikita</name> 
         <coordinates> 
-            <x>1.203</x> 
-            <y>1</y> 
+            <x>2.34</x>
+            <y>1.203</y>
         </coordinates> 
         <realHero>true</realHero> 
         <hasToothpick>true</hasToothpick> 

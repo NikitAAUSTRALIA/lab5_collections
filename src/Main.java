@@ -12,7 +12,7 @@ public class Main {
         String filename;
         if (args.length != 1) {
             console.printError("Необходимо передать имя файла в качестве аргумента, использую файл по умолчанию: data.xml");
-            filename = "C:\\Users\\selec\\IdeaProjects\\lab_collection\\src\\data.xml";
+            filename = "src/data.xml";
         } else {
             filename = args[0];
         }
@@ -20,7 +20,6 @@ public class Main {
         XmlFileReader reader = new XmlFileReader(filename, console);
         IdManager.setCollectionManager(collectionManager);
 
-        // setup all my commands
         commandManager.addCommand("help", new Help(console, commandManager));
         commandManager.addCommand("info", new Info(console, collectionManager));
         commandManager.addCommand("show", new Show(console, collectionManager));
@@ -38,7 +37,6 @@ public class Main {
         commandManager.addCommand("head", new Head(console, collectionManager));
         commandManager.addCommand("min_by_impact_speed", new MinByImpactSpeed(console, collectionManager));
 
-        // interactive mode
         new InteractiveManager(commandManager, reader, console, collectionManager).interactiveMode();
     }
 }
